@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 500px; }
+    h2 { margin-top: 20px; font-size: 16px; border-bottom: 1px solid #ccc; padding-bottom: 5px;}
+    input[type="text"] { width: 70%; padding: 5px; }
+    button { padding: 5px 10px; cursor: pointer; }
+    ul { list-style-type: none; padding: 0; }
+    li { border-bottom: 1px solid #eee; padding: 5px 0; display: flex; justify-content: space-between; }
+    .delete-btn { background-color: #ff4d4d; color: white; border: none; font-size: 12px; margin-left: 10px; }
+  </style>
+</head>
+<body>
+
+  <h1>設定</h1>
+
+  <h2>リダイレクト先URL</h2>
+  <div>
+    <input type="text" id="targetUrl" placeholder="https://example.com/...">
+    <button id="saveTarget">保存</button>
+  </div>
+  <div style="margin-top: 5px; font-size: 0.9em;">現在の設定: <span id="currentTarget">未設定</span></div>
+
+  <h2>ブロックするドメイン</h2>
+  <div>
+    <input type="text" id="blockUrl" placeholder="example.com">
+    <button id="addBlock">追加</button>
+  </div>
+
+  <h3>登録済みドメイン一覧</h3>
+  <ul id="blockList"></ul>
+
+  <script src="options.js"></script>
+</body>
+</html>
